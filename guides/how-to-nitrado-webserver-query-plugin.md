@@ -1,6 +1,6 @@
 # How to use Nitrado's Hytale Webserver and Query plugin
 
-Nitrado has created a [Webserver](https://github.com/nitrado/hytale-plugin-webserver) and [Query](https://github.com/nitrado/hytale-plugin-query) plugin that allows for web-based interaction with your Hytale server. This is being setup on a dedicated server, using [this server setup guide](https://github.com/oddzag/hytale-resources/blob/1428ee76ddaf65119ce02480e63bd9aae63365e7/guides/how-to-nitrado-webserver-query-plugin.md) as reference.
+Nitrado has created a [Webserver](https://github.com/nitrado/hytale-plugin-webserver) and [Query](https://github.com/nitrado/hytale-plugin-query) plugin that allows for web-based interaction with your Hytale server. This is being setup on a dedicated server, using [this server setup guide](https://github.com/oddzag/hytale-resources/blob/main/guides/how-to-dedicated-server-debian-12.md) as reference.
 
 Once the server is started, the webserver starts automatically, running on the server's default port `5520` + 3 i.e if you make no changes, the webserver will run on port `5523`. By default, TLS is enabled, so any attempts to connect must use SSL. For my personal testing purposes, I'm disabling TLS and manually specifying the host IP. If you want to leave it enabled, you'll need to trust the certificates in your browser or however you're accessing the endpoints.
 
