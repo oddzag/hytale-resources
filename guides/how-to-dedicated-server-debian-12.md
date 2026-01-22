@@ -1,3 +1,5 @@
+# How to set up dedicated Hytale server on Debian 13
+
 I was re-setting up my server and wrote myself a guide for reference, thought maybe it might be useful. It's on a headless Debian 13 server, just for my usage. Docker is probably much easier, but I wanted to setup the Nitrado Webserver/Query plugin, as well as set up automatic backups and updates.
 
   
