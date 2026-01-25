@@ -6,7 +6,7 @@ mkdir /opt/hytale/dev
 cd /opt/hytale/dev
 git clone https://github.com/jrilez/Hytale-Example-Project .
 ```
-Next, make `gradlew` executible and then build the plugin
+Next, make `gradlew` executable and then build the plugin
 ```
 chmod +x /opt/hytale/dev/Hytale-Example-Project/gradlew
 ./gradlew shadowJar
