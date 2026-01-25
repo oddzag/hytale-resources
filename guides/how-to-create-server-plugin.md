@@ -2,8 +2,8 @@
 
 This guide is based on [this server setup](https://github.com/oddzag/hytale-resources/blob/main/guides/how-to-dedicated-server-debian-13.md). It is a simple server plugin that creates a usable in-game command, in this case `/test`. Start by making a working directory, then clone the template, and configure it for your project.
 ```
-mkdir /opt/hytale/dev
-cd /opt/hytale/dev
+mkdir -p /opt/hytale/dev/Hytale-Example-Project
+cd /opt/hytale/dev/Hytale-Example-Project
 git clone https://github.com/jrilez/Hytale-Example-Project .
 ```
 Next, make `gradlew` executable and then build the plugin
