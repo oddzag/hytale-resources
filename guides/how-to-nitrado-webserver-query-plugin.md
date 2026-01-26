@@ -53,12 +53,12 @@ The problem so far is that in order to access the /Nitrado/Query endpoint, you n
 So let's create a temporary service account for testing, and then we'll use it to access the /Nitrado/Query in the browser.
 ```
 cd /opt/hytale/Homeworld/mods/Nitrado_WebServer/provisioning
-nano bumzag.serviceaccount.json
+nano oddzag.serviceaccount.json
 ```
 ```
 {
   "Enabled": true,
-  "Name": "serviceaccount.bumzag",
+  "Name": "serviceaccount.oddzagzag",
   "PasswordHash": "$2y$10$3qjK4mnB3qFo7DMRJG8ZyeOK7PcEvuBWSE1IlQWFIW.eI2AyNNzze",
   "Groups": ["OP"],
   "Permissions": ["nitrado.query.web.read.players"]
@@ -69,10 +69,10 @@ Based on Nitrado's WebServer [authentication flow](https://github.com/nitrado/hy
 
 Save that config file and restart the server. This time, if you monitor the server's console output, you'll see:
 ```
-Jan 22 14:12:06 hytale java[4843]: [2026/01/22 19:12:06   INFO]                    [WebServer|P] Importing service account file bumzag.serviceaccount.json
+Jan 22 14:12:06 hytale java[4843]: [2026/01/22 19:12:06   INFO]                    [WebServer|P] Importing service account file oddzag.serviceaccount.json
 ```
 
 Now you can hit that endpoint with your desired stack. Test it with `curl` and you should get that default `JSON` payload.
 ```
-curl -u serviceAccount.Bumzag:ThisIsATestPassword http://192.168.1.10:5523/Nitrado/Query
+curl -u serviceAccount.oddzag:ThisIsATestPassword http://192.168.1.10:5523/Nitrado/Query
 ```
