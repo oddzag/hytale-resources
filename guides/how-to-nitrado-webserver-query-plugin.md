@@ -4,7 +4,7 @@ Nitrado has created a [Webserver](https://github.com/nitrado/hytale-plugin-webse
 
 Once the server is started, the webserver starts automatically, running on the server's default port `5520` + 3 i.e if you make no changes, the webserver will run on port `5523`. By default, TLS is enabled, so any attempts to connect must use SSL. For my personal testing purposes, I'm disabling TLS and manually specifying the host IP. If you want to leave it enabled, you'll need to trust the certificates in your browser or however you're accessing the endpoints.
 
-Start by stopping the server and downloading both JAR files into your server's `mods` directory. Then create the Webserver's directory (or just start/stop the server to let the app create it automatically) and then the Webserver config file. You don't **need** to create the config file, this is just if you need to make changes like the ones described above (disabling TLS/specifying host IP):
+Start by stopping the server and downloading both JAR files into your server's `mods` directory. Then create the Webserver's directory (or just start/stop the server after you add the jar files to the `mods` directory to let the app create it automatically) and then the Webserver config file. You don't **need** to create the config file, this is just if you need to make changes like the ones described above (disabling TLS/specifying host IP):
 
 ```
 sudo systemctl stop hytale-Homeworld.service
@@ -16,7 +16,7 @@ mkdir Nitrado_WebServer
 nano Nitrado_WebServer/config.json
 ```
 
-This will bind the host to specific IP and disable TLS so you can make insecure GET requests to /Nitrado/Query. I'm doing this on my local network with no external access, I do not recommend doing this on a public facing server.
+This will bind the host to the specified IP and disable TLS so you can make insecure GET requests to /Nitrado/Query. I'm doing this on my local network with no external access, I do not recommend doing this on a public facing server.
 
 `/opt/hytale/Homeworld/mods/Nitrado_WebServer/config.json`
 ```
@@ -27,6 +27,7 @@ This will bind the host to specific IP and disable TLS so you can make insecure 
   }
 }
 ```
+*`192.168.1.10` is just being used as an example, it's the IP of the host that is running the Hytale server. Replace it with your server IP*
 
 Now start the server and you can access the WebServer UI via http://192.168.1.10:5523. If you left TLS enabled, you'd simply go to https://192.168.1.10:5523 and just accept the risk of an unrecognized self-signed certificate.
 ```
